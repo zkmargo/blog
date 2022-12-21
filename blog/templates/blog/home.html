@@ -5,13 +5,17 @@
     <title>Primeiro Template</title>
 </head>
 <body>
-    <h2>Lista de posts cadastrados</h2>
+<h2>Lista de posts cadastrados</h2>
 
-    <ul>
-        {% for post in posts %}
-            <a href="{% url 'post_detail' post.id %}"> {{ post.titulo }} - {{ post.autor }}  </a>
-        <br/>
-        {% endfor %}
-    </ul>
+<ul>
+    {% for post in posts %}
+    <a href="{% url 'post_detail' post.id %}"> {{ post.titulo }} - {{ post.autor }} </a>
+    <br/>
+    {% endfor %}
+</ul>
+
+    {% load static %}
+    <img src="{% static 'blog/imagem.jpg'%}">
+
 </body>
 </html>
